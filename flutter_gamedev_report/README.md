@@ -1,3 +1,3 @@
 # flutter_gamedev_report
 
-A new Flutter project.
+Демонстрационные мини-проекты для доклада "Flutter для разработки игр".
