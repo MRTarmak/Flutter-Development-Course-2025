@@ -16,8 +16,8 @@ void main() {
 class PhysicsSandbox extends Forge2DGame with TapCallbacks {
   PhysicsSandbox()
       : super(
-          gravity: Vector2(0, 50), // ускорение свободного падения
-          zoom: 1, // пикселей на 1 метр
+          gravity: Vector2(0, 50),
+          zoom: 1,
         );
 
   final _rng = Random();
@@ -31,13 +31,12 @@ class PhysicsSandbox extends Forge2DGame with TapCallbacks {
 
     camera.viewfinder.anchor = Anchor.topLeft;
 
-    // Размер мира в метрах (пиксели / zoom)
     final w = size.x / camera.viewfinder.zoom;
     final h = size.y / camera.viewfinder.zoom;
 
-    add(Wall(Vector2(0, h), Vector2(w, h))); // пол
-    add(Wall(Vector2(0, 0), Vector2(0, h))); // левая
-    add(Wall(Vector2(w, 0), Vector2(w, h))); // правая
+    add(Wall(Vector2(0, h), Vector2(w, h)));
+    add(Wall(Vector2(0, 0), Vector2(0, h)));
+    add(Wall(Vector2(w, 0), Vector2(w, h)));
   }
 
   @override

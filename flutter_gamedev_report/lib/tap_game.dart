@@ -1,9 +1,13 @@
 import 'dart:math';
-
+import 'package:flutter/widgets.dart';
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/text.dart';
+
+void main() {
+  runApp(GameWidget(game: TapGame()));
+}
 
 class TapGame extends FlameGame with TapCallbacks {
   final Random _rng = Random();
